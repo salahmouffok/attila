@@ -51,7 +51,6 @@ function styles() {
 //         .pipe(zip(filename))
 //         .pipe(gulp.dest(targetDir));
 // }
-
 function watchFiles() {
     browserSync.init({
         proxy: "localhost:2368"
