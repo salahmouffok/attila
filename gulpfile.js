@@ -12,14 +12,9 @@ sass.compiler = require('node-sass');
 
 var paths = {
     styles: {
-        src: "src/scss/screen.scss",
+        src: "src/sass/style.scss",
         dest: "assets/css/"
     }
-    // Easily add additional paths
-    // ,html: {
-    //  src: '...',
-    //  dest: '...'
-    // }
 };
 
 
@@ -56,10 +51,10 @@ function watchFiles() {
         proxy: "localhost:2368"
     });
 
-    watch(['src/scss/**/*.scss'], styles);
-    watch(['**/*.hbs', 'gulpfile.js', 'assets/js/*.js'], reload);
+    watch(['src/sass/**/*.scss'], styles);
+    watch(['**/*.hbs'], reload);
 }
-
+//'gulpfile.js', 'assets/js/*.js' , 
 
 exports.styles = styles;
 // exports.release = release;
